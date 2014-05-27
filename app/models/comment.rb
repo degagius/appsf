@@ -1,6 +1,6 @@
 class Comment < ActiveRecord::Base
     def change
-    create_table :comments do |t|
+    create_table :comment do |t|
       t.string :title
       t.text :text
 

@@ -9,12 +9,16 @@ class CommentsController < ApplicationController
     redirect_to @comment
   end
    
-  private
-    def comment_params
-      params.require(:comment).permit(:title, :text)
-    end
+  def comment_params
+    params.require(:comment).permit(:title, :text)
+  end
     
   def show
     @comment = Comment.find(params[:id])
   end
+  
+  def index
+    @comment = Comment.all
+  end
+  
 end
